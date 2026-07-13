@@ -1,0 +1,32 @@
+{
+  "name": "vpn-turbo-tunnel",
+  "version": "2.0.0",
+  "description": "Ultra-fast, censorship-resistant VPN tunnel system with Cloudflare integration",
+  "main": "src/web/server.js",
+  "scripts": {
+    "start": "node src/web/server.js",
+    "deploy": "bash src/scripts/deploy.sh",
+    "test": "bash src/scripts/test-connection.sh",
+    "build": "npm install && npm run deploy"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "uuid": "^9.0.0",
+    "axios": "^1.4.0",
+    "ws": "^8.13.0",
+    "node-fetch": "^3.3.1",
+    "tls": "^0.0.1",
+    "net": "^1.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/vpn-turbo-tunnel"
+  },
+  "keywords": ["vpn", "tunnel", "cloudflare", "proxy", "anti-censorship"],
+  "license": "MIT"
+}
