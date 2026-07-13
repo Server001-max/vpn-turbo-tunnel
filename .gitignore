@@ -1,0 +1,12 @@
+node_modules/
+.env
+*.log
+dist/
+build/
+*.pem
+*.key
+*.crt
+.DS_Store
+coverage/
+.nyc_output/
+*.local
