@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Turbo Tunnel - Ultimate VPN Solution</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 VPN Turbo Tunnel</h1>
+            <p>Ultra-fast, censorship-resistant VPN with Cloudflare integration</p>
+        </header>
+
+        <main>
+            <section id="dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Active Tunnels</h3>
+                        <span id="tunnelCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Bandwidth</h3>
+                        <span id="bandwidth">0 MB</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Uptime</h3>
+                        <span id="uptime">0s</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Connections</h3>
+                        <span id="connections">0</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tunnel-controls">
+                <div class="control-panel">
+                    <h2>Create New Tunnel</h2>
+                    <form id="tunnelForm">
+                        <div class="form-group">
+                            <label for="protocol">Protocol</label>
+                            <select id="protocol" name="protocol">
+                                <option value="vless">VLESS</option>
+                                <option value="trojan">Trojan</option>
+                                <option value="vmess">VMess</option>
+                                <option value="ws">WebSocket</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="encryption">Encryption</label>
+                            <select id="encryption" name="encryption">
+                                <option value="chacha20-poly1305">ChaCha20-Poly1305</option>
+                                <option value="aes-128-gcm">AES-128-GCM</option>
+                                <option value="none">None</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sni">SNI (Spoofing)</label>
+                            <input type="text" id="sni" name="sni" value="cloudflare.com" placeholder="Enter SNI domain">
+                        </div>
+                        <div class="form-group">
+                            <label for="path">WebSocket Path</label>
+                            <input type="text" id="path" name="path" value="/ws" placeholder="/ws">
+                        </div>
+                        <button type="submit" class="btn-primary">Create Tunnel</button>
+                    </form>
+                </div>
+
+                <div class="config-display">
+                    <h2>Configuration</h2>
+                    <pre id="configOutput">Select options and create tunnel</pre>
+                    <button id="copyConfig" class="btn-secondary">Copy Configuration</button>
+                    <button id="exportConfig" class="btn-secondary">Export JSON</button>
+                </div>
+            </section>
+
+            <section id="workers-section">
+                <h2>Cloudflare Workers</h2>
+                <div class="worker-controls">
+                    <button id="deployWorker" class="btn-primary">Deploy New Worker</button>
+                    <button id="listWorkers" class="btn-secondary">List Workers</button>
+                </div>
+                <div id="workersList"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ | Open Source | MIT License</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
